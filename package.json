@@ -1,0 +1,33 @@
+{
+  "name": "zzzz-plugin-http",
+  "version": "1.1.0",
+  "description": "Cordova / Phonegap plugin for communicating with RxAndroid OkHttp Retrofit",
+  "cordova": {
+    "id": "zzzz-plugin-http",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AaaCabbage/simpleHttp.git"
+  },
+  "keywords": [
+    "cordova",
+    "device",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Wymsee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AaaCabbage/simpleHttp/issues"
+  },
+  "homepage": "https://github.com/AaaCabbage/simpleHttp#readme"
+}

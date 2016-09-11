@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  id="zzzz-plugin-http"
+  version="1.1.0">
+
+    <name>simple http</name>
+ 
+    <description>
+        Cordova / Phonegap plugin for communicating with HTTP servers with RxAndroid OkHttp Retrofit
+	</description>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <js-module src="www/http.js" name="SimpleHttp">
+        <clobbers target="SimpleHttp" />
+    </js-module>
+
+
+
+    <!--android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SimpleHttp">
+                <param name="android-package" value="com.zzzz.SimpleHttp"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.INTERNET" />
+        </config-file>
+        
+        <source-file src="src/android/com/zzzz/http/BaseHttp.java" target-dir="src/com/zzzz" />
+        <source-file src="src/android/com/synconset/CordovaHTTP/HttpGet.java" target-dir="src/com/zzzz" />
+        <source-file src="src/android/com/synconset/CordovaHTTP/HttpPlugin.java" target-dir="src/com/zzzz" />
+        <source-file src="src/android/com/synconset/CordovaHTTP/HttpPost.java" target-dir="src/com/zzzz" />
+        <source-file src="src/android/com/synconset/CordovaHTTP/ResponseBean.java" target-dir="src/com/zzzz" />
+
+   
+    </platform>
+</plugin>
