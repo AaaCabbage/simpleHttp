@@ -2,10 +2,10 @@
 var exec = require('cordova/exec');
 var Http = {
     get:function(url,success,error){
-        exec(success,error,"zHttp","get",[url]);
+        exec(success,error,"SimpleHttp","get",[url]);
     },
     post:function(url,params,success,error){
-        exec(success,error,"zHttp","post",[url,params]);
+        exec(success,error,"SimpleHttp","post",[url,params]);
     }
 }
 module.exports = Http;
