@@ -40,4 +40,15 @@
 
    
     </platform>
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="SimpleHttp">
+                <param name="ios-package" value="zHttp"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/zHttp.h" />
+        <source-file src="src/ios/zHttp.m" />
+       
+    </platform>
 </plugin>
